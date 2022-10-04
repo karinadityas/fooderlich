@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'fooderlich_theme.dart';
 
 class Card1 extends StatelessWidget {
+  final ExploreRecipe recipe;
+
   const Card1({Key? key}) : super(key: key);
   final String category = 'Editor\'s Choice';
   final String title = 'The Art of Dough';
   final String description = 'Learn to make the perfect bread.';
   final String chef = 'Ray Wenderlich';
 
-  @override
+  @Override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
