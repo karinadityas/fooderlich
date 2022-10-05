@@ -8,23 +8,23 @@ class RecipeCardType {
 }
 
 class ExploreRecipe {
-  String cardType;
-  String title;
-  String subtitle;
-  String backgroundImage;
-  String backgroundImageSource;
-  String message;
-  String authorName;
-  String role;
-  String profileImage;
-  int durationInMinutes;
-  String dietType;
-  int calories;
-  List<String> tags;
-  String description;
-  String source;
-  List<Ingredients> ingredients;
-  List<Instruction> instructions;
+  String? cardType;
+  String? title;
+  String? subtitle;
+  String? backgroundImage;
+  String? backgroundImageSource;
+  String? message;
+  String? authorName;
+  String? role;
+  String? profileImage;
+  int? durationInMinutes;
+  String? dietType;
+  int? calories;
+  List<String>? tags;
+  String? description;
+  String? source;
+  List<Ingredients>? ingredients;
+  List<Instruction>? instructions;
   ExploreRecipe(
       {this.cardType,
       this.title,
@@ -62,13 +62,13 @@ class ExploreRecipe {
     if (json['ingredients'] != null) {
       ingredients = <Ingredients>[];
       json['ingredients'].forEach((v) {
-        ingredients.add(Ingredients.fromJson(v));
+        ingredients?.add(Ingredients.fromJson(v));
       });
     }
     if (json['instructions'] != null) {
       instructions = <Instruction>[];
       json['instructions'].forEach((v) {
-        instructions.add(Instruction.fromJson(v));
+        instructions?.add(Instruction.fromJson(v));
       });
     }
   }

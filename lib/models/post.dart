@@ -1,8 +1,8 @@
 class Post {
-  String profileImageUrl;
-  String comment;
-  String foodPictureUrl;
-  String timestamp;
+  String? profileImageUrl;
+  String? comment;
+  String? foodPictureUrl;
+  String? timestamp;
   Post(
       {this.profileImageUrl,
       this.comment,

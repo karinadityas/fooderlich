@@ -3,7 +3,7 @@ import '../models/models.dart';
 
 class RecipeThumbnail extends StatelessWidget {
   final SimpleRecipe recipe;
-  const RecipeThumbnail({Key key, this.recipe}) : super(key: key);
+  const RecipeThumbnail({Key? key, required this.recipe}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
