@@ -17,6 +17,24 @@
             "comment": "Made a delicious salad today!",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "20"
+        },           
+        {
+            "profileImageUrl": "assets/profile_pics/person_cesare.jpeg",
+            "comment": "Made this delicious pizza this morning",
+            "foodPictureUrl": "card_carrot.png",
+            "timestamp": "10"
+        },
+        {
+            "profileImageUrl": "assets/profile_pics/person_stef.jpeg",
+            "comment": "Made delicious creamy, shrimp black pepper pasta.",
+            "foodPictureUrl": "card_carrot.png",
+            "timestamp": "80"
+        },
+        {
+            "profileImageUrl": "assets/profile_pics/person_crispy.png",
+            "comment": "Made a delicious salad today!",
+            "foodPictureUrl": "card_carrot.png",
+            "timestamp": "20"
         },
         {
             "profileImageUrl": "assets/profile_pics/person_joe.jpeg",

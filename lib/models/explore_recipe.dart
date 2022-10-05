@@ -25,8 +25,7 @@ class ExploreRecipe {
   String source;
   List<Ingredients> ingredients;
   List<Instruction> instructions;
-
-   ExploreRecipe(
+  ExploreRecipe(
       {this.cardType,
       this.title,
       this.subtitle,
@@ -44,7 +43,6 @@ class ExploreRecipe {
       this.source,
       this.ingredients,
       this.instructions});
-
   ExploreRecipe.fromJson(Map<String, dynamic> json) {
     cardType = json['cardType'];
     title = json['title'];
@@ -71,7 +69,7 @@ class ExploreRecipe {
       instructions = <Instruction>[];
       json['instructions'].forEach((v) {
         instructions.add(Instruction.fromJson(v));
-        });
-      }
+      });
     }
   }
+}

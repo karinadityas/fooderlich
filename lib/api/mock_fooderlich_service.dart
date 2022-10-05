@@ -2,14 +2,12 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import '../models/models.dart';
 
-// Mock recipe service that grabs sample json data to mock recipe request/r
-esponse
+// Mock recipe service that grabs sample json data to mock recipe request/response
 class MockFooderlichService {
   // Batch request that gets both today recipes and friend's feed
   Future<ExploreData> getExploreData() async {
     final todayRecipes = await _getTodayRecipes();
     final friendPosts = await _getFriendFeed();
- 
     return ExploreData(todayRecipes, friendPosts);
   }
 
@@ -19,11 +17,10 @@ class MockFooderlichService {
     await Future.delayed(const Duration(milliseconds: 1000));
     // Load json from file system
     final dataString =
-      await _loadAsset('assets/sample_data/sample_explore_recipes.json');
+        await _loadAsset('assets/sample_data/sample_explore_recipes.json');
     // Decode to json
     final Map<String, dynamic> json = jsonDecode(dataString);
-
-    // Go through each recipe and convert json to ExploreRecipe object
+    // Go through each recipe and convert json to ExploreRecipe object.
     if (json['recipes'] != null) {
       final recipes = <ExploreRecipe>[];
       json['recipes'].forEach((v) {
@@ -41,10 +38,9 @@ class MockFooderlichService {
     await Future.delayed(const Duration(milliseconds: 1000));
     // Load json from file system
     final dataString =
-      await _loadAsset('assets/sample_data/sample_friends_feed.json');
+        await _loadAsset('assets/sample_data/sample_friends_feed.json');
     // Decode to json
     final Map<String, dynamic> json = jsonDecode(dataString);
-
     // Go through each post and convert json to Post object.
     if (json['feed'] != null) {
       final posts = <Post>[];
@@ -63,10 +59,9 @@ class MockFooderlichService {
     await Future.delayed(const Duration(milliseconds: 1000));
     // Load json from file system
     final dataString =
-      await _loadAsset('assets/sample_data/sample_recipes.json');
+        await _loadAsset('assets/sample_data/sample_recipes.json');
     // Decode to json
     final Map<String, dynamic> json = jsonDecode(dataString);
-
     // Go through each recipe and convert json to SimpleRecipe object.
     if (json['recipes'] != null) {
       final recipes = <SimpleRecipe>[];
@@ -74,9 +69,9 @@ class MockFooderlichService {
         recipes.add(SimpleRecipe.fromJson(v));
       });
       return recipes;
-      } else {
-        return [];
-      }
+    } else {
+      return [];
+    }
   }
 
   // Loads sample json data from file system
@@ -84,7 +79,3 @@ class MockFooderlichService {
     return rootBundle.loadString(path);
   }
 }
-
-
-
-
