@@ -14,21 +14,7 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
-    Card1(
-        recipe: ExploreRecipe(
-            authorName: 'Ray Wenderlich',
-            title: 'The Art of Dough',
-            subtitle: 'Editor\'s Choice',
-            message: 'Learn to make the perfect bread.',
-            backgroundImage: 'assets/magazine_pics/card_bread.jpg')),
-    Card2(
-        recipe: ExploreRecipe(
-            authorName: 'Mike Katz',
-            role: 'Smoothie Connoisseur',
-            profileImage: 'assets/profile_pics/person_katz.jpeg',
-            title: 'Recipe',
-            subtitle: 'Smoothies',
-            backgroundImage: 'assets/magazine_pics/mag2.png')),
+    RecipesScreen(),
     Card3(
         recipe: ExploreRecipe(
             title: 'Vegan Trends',
