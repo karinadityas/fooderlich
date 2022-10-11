@@ -5,7 +5,7 @@ import 'grocery_item_screen.dart';
 
 class GroceryListScreen extends StatelessWidget {
   final GroceryManager manager;
-  const GroceryListScreen({Key key, this.manager}) : super(key: key);
+  const GroceryListScreen({Key? key, this.manager}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final groceryItems = manager.groceryItems;

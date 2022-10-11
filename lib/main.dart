@@ -9,7 +9,7 @@ void main() {
 }
 
 class Fooderlich extends StatelessWidget {
-  const Fooderlich({Key key}) : super(key: key);
+  const Fooderlich({Key? key}) : super(key: key);
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
