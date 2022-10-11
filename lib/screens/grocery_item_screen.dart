@@ -12,7 +12,7 @@ class GroceryItemScreen extends StatefulWidget {
   final GroceryItem originalItem;
   final bool isUpdating;
   const GroceryItemScreen({
-    Key key,
+    Key? key,
     this.onCreate,
     this.onUpdate,
     this.originalItem,
