@@ -16,7 +16,7 @@ class GroceryListScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             final item = groceryItems[index];
             return Dismissible(
-              key: Key(item.id),
+              key: Key(item.id!),
               direction: DismissDirection.endToStart,
               background: Container(
                 color: Colors.red,
@@ -37,10 +37,10 @@ class GroceryListScreen extends StatelessWidget {
               },
               child: InkWell(
                 child: GroceryTile(
-                  key: Key(item.id),
+                  key: Key(item.id!),
                   item: item,
                   onComplete: (change) {
-                    manager.completeItem(index, change);
+                    manager.completeItem(index, change!);
                   },
                 ),
                 onTap: () {
@@ -52,7 +52,7 @@ class GroceryListScreen extends StatelessWidget {
                         onUpdate: (item) {
                           manager.updateItem(item, index);
                           Navigator.pop(context);
-                        },
+                        }, onCreate: (item ) {  },
                       ),
                     ),
                   );
