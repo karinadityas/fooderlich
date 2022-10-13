@@ -5,7 +5,7 @@ import '../models/grocery_item.dart';
 
 class GroceryTile extends StatelessWidget {
   final GroceryItem item;
-  final Function(bool) onComplete;
+  final Function(bool?)? onComplete;
   final TextDecoration textDecoration;
   GroceryTile({Key? key, required this.item, required this.onComplete})
       : textDecoration =
@@ -77,7 +77,7 @@ class GroceryTile extends StatelessWidget {
 
   Widget buildDate() {
     final dateFormatter = DateFormat('MMMM dd h:mm a');
-    final dateString = dateFormatter.format(item.date);
+    final dateString = dateFormatter.format(item.date!);
     return Text(
       dateString,
       style: TextStyle(decoration: textDecoration),
