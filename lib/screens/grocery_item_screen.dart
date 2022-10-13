@@ -7,10 +7,10 @@ import '../models/models.dart';
 import '../components/grocery_tile.dart';
 
 class GroceryItemScreen extends StatefulWidget {
-  final Function(GroceryItem) onCreate;
-  final Function(GroceryItem) onUpdate;
-  final GroceryItem originalItem;
-  final bool isUpdating;
+  final Function(GroceryItem)? onCreate;
+  final Function(GroceryItem)? onUpdate;
+  final GroceryItem? originalItem;
+  final bool? isUpdating;
   const GroceryItemScreen({
     Key? key,
     this.onCreate,
@@ -33,13 +33,13 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
   @override
   void initState() {
     if (widget.originalItem != null) {
-      _nameController.text = widget.originalItem.name;
-      _name = widget.originalItem.name;
-      _currentSliderValue = widget.originalItem.quantity;
-      _importance = widget.originalItem.importance;
-      _currentColor = widget.originalItem.color;
-      final date = widget.originalItem.date;
-      _timeOfDay = TimeOfDay(hour: date.hour, minute: date.minute);
+      _nameController.text = widget.originalItem!.name!;
+      _name = widget.originalItem!.name!;
+      _currentSliderValue = widget.originalItem!.quantity!;
+      _importance = widget.originalItem!.importance!;
+      _currentColor = widget.originalItem!.color!;
+      final date = widget.originalItem!.date;
+      _timeOfDay = TimeOfDay(hour: date!.hour, minute: date.minute);
       _dueDate = date;
     }
     _nameController.addListener(() {
