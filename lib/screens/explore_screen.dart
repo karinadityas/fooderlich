@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fooderlich/models/explore_data.dart';
 import '../api/mock_fooderlich_service.dart';
 import '../components/components.dart';
 
@@ -10,7 +9,7 @@ class ExploreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder(
         future: mockService.getExploreData(),
-        builder: (context, AsyncSnapshot <ExploreData> snapshot) {
+        builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return ListView(scrollDirection: Axis.vertical, children: [
               TodayRecipeListView(recipes: snapshot.data!.todayRecipes),
